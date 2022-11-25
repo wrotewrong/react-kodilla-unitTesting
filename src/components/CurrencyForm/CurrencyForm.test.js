@@ -10,6 +10,9 @@ const testCases = [
 ];
 
 describe('Component CurrencyForm', () => {
+  it('should render without crashing', () => {
+    render(<CurrencyForm action={() => {}} />);
+  });
   for (const testObj of testCases) {
     it('should run action callback with proper data on form submit', () => {
       const action = jest.fn();
